@@ -41,7 +41,7 @@
 /* Estilo para la imagen de John */
 /* Contenedor principal de la imagen */
 /* Contenedor principal */
-
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 .whatsapp-btn-container {
     position: fixed;
     right: 20px;
@@ -72901,4 +72901,5 @@ form textarea:required:valid {
 
 /* ------------------------------------------------*/
 /* Features Contact Data End */
+
 /* ------------------------------------------------*/
