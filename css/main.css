@@ -66454,7 +66454,7 @@ img {
 /* Elements - Typography Start */
 /* ------------------------------------------------*/
 h1 {
-  font: normal 300 5.6rem var(--_font-accent);
+  font:  300 5.6rem var(--_font-accent);
   color: var(--t-bright);
 }
 @media only screen and (min-width: 768px) {
@@ -72903,4 +72903,5 @@ form textarea:required:valid {
 
 /* ------------------------------------------------*/
 /* Features Contact Data End */
+
 /* ------------------------------------------------*/
