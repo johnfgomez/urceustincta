@@ -41,13 +41,15 @@
 /* Estilo para la imagen de John */
 /* Contenedor principal de la imagen */
 /* Contenedor principal */
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
 .whatsapp-btn-container {
     position: fixed;
     right: 20px;
     bottom: 20px;
     z-index: 999;
   }
+
+
 
   .whatsapp-brand-btn {
     display: flex;
@@ -143,7 +145,7 @@
 
 .profile-bg-image img {
   position: absolute;
-  top: 0;
+  top: 30px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -68426,7 +68428,7 @@ form textarea:required:valid {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  
   background: -webkit-gradient(linear, left top, left bottom, color-stop(78%, rgba(var(--base-rgb), 0)), color-stop(97%, rgba(var(--base-rgb), 1)));
   background: -moz-linear-gradient(top, rgba(var(--base-rgb), 0) 78%, rgba(var(--base-rgb), 1) 97%);
   background: linear-gradient(to bottom, rgba(var(--base-rgb), 0) 78%, rgba(var(--base-rgb), 1) 97%);
@@ -69006,7 +69008,7 @@ form textarea:required:valid {
 }
 @media only screen and (min-width: 1600px) {
   .main__media.media-grid-bottom {
-    padding-bottom: 5.5rem;
+    padding-bottom: 20.5rem;
   }
 }
 
@@ -69042,7 +69044,7 @@ form textarea:required:valid {
 }
 @media only screen and (min-width: 768px) {
   .inner.inner-grid-bottom {
-    padding: 16rem 0 3.5rem 0;
+    padding: 0rem 0 3.5rem 0;
   }
   .inner.inner-stack {
     padding: 5.3rem 0 0.5rem 0;
@@ -69093,7 +69095,7 @@ form textarea:required:valid {
 }
 @media only screen and (min-width: 1600px) {
   .inner.inner-grid-bottom {
-    padding: 21rem 0 5.5rem 0;
+    padding: 1rem 0 5.5rem 0;
   }
   .inner.inner-stack {
     padding: 13.5rem 0 0.5rem 0;
@@ -72901,5 +72903,4 @@ form textarea:required:valid {
 
 /* ------------------------------------------------*/
 /* Features Contact Data End */
-
 /* ------------------------------------------------*/
