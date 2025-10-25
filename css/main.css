@@ -42,6 +42,14 @@
 /* Contenedor principal de la imagen */
 /* Contenedor principal */
 
+
+.urbanist-<uniquifier> {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
 .proceso-tattoo-container {
             max-width: 1400px;
             width: 100%;
@@ -73170,3 +73178,4 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* Features Contact Data End */
 /* ------------------------------------------------*/
+
