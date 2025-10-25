@@ -22,9 +22,7 @@
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
     <link rel="manifest" href="img/favicon/manifest.webmanifest">
     <!-- Template Favicon & Icons End -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
     <!-- Facebook Metadata Start -->
     <meta property="og:image:height" content="1200">
     <meta property="og:image:width" content="1200">
@@ -48,6 +46,25 @@
 
 	  <!-- Meta Pixel Code -->
 <script>
+	
+        document.addEventListener('DOMContentLoaded', function() {
+            const preguntas = document.querySelectorAll('.pregunta-titulo');
+            
+            preguntas.forEach(pregunta => {
+                pregunta.addEventListener('click', function() {
+                    const preguntaCompleta = this.parentElement;
+                    preguntaCompleta.classList.toggle('activa');
+                    
+                    // Cerrar otras preguntas abiertas (opcional)
+                    document.querySelectorAll('.pregunta').forEach(item => {
+                        if (item !== preguntaCompleta && item.classList.contains('activa')) {
+                            item.classList.remove('activa');
+                        }
+                    });
+                });
+            });
+        });
+    
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -67,6 +84,7 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
 
   <body>
 
+
     <!-- Header Start -->
     <header id="header" class="header d-flex justify-content-center loading__fade">
   <!-- Navigation Menu Start -->
@@ -76,37 +94,37 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
         <li class="menu__item">
           <a class="menu__link btn" href="#home">
             <span class="menu__caption">Inicio</span>
-            <i class="ph ph-house-simple"></i>
+            <i class="ph ph-castle-turret"></i>
           </a>
         </li>
         <li class="menu__item">
           <a class="menu__link btn" href="#portfolio">
             <span class="menu__caption">Portafolio</span>
-            <i class="ph ph-squares-four"></i>
+            <i class="ph ph-palette"></i>
           </a>
         </li>
         <li class="menu__item">
           <a class="menu__link btn" href="#about">
             <span class="menu__caption">Sobre mí</span>
-            <i class="ph ph-user"></i>
+            <i class="ph ph-hand-eye"></i>
           </a>
         </li>
         <li class="menu__item">
           <a class="menu__link btn" href="#services">
             <span class="menu__caption">Servicios</span>
-            <i class="ph ph-sticker"></i>
+            <i class="ph ph-flower-lotus"></i>
           </a>
         </li>
         <li class="menu__item">
           <a class="menu__link btn" href="#resume">
             <span class="menu__caption">Cuidados</span>
-            <i class="ph ph-article"></i>
+            <i class="ph ph-first-aid"></i>
           </a>
         </li>
         <li class="menu__item">
           <a class="menu__link btn" href="#contact">
-            <span class="menu__caption">Contacto</span>
-            <i class="ph ph-envelope"></i>
+            <span class="menu__caption">Agenda</span>
+            <i class="ph ph-calendar-check"></i>
           </a>
         </li>
       </ul>
@@ -119,7 +137,6 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
 </header>
 <!-- Header End -->
    
-
     <!-- Fixed Logo Start -->
     <div class="logo loading__fade">
       <a href="#home" class="logo__link">
@@ -160,7 +177,7 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
     <svg class="whatsapp-brand-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
       <path fill="currentColor" d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 0 3.628 0 7.992c0 1.399.296 2.707.831 3.918L0 16l4.204-1.102a7.927 7.927 0 0 0 3.79.992h.004c4.368 0 7.998-3.628 7.998-7.992a7.922 7.922 0 0 0-1.395-4.582zM7.994 14.773a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
     </svg>
-    <span class="whatsapp-brand-text">Chateamos</span>
+    
   </a>
 </div>
 
@@ -370,8 +387,8 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
                   <!-- Content Block - Section Name Start -->
                   <div class="content__block name-block">
                     <span class="section-name icon-right animate-in-up">
-                      <span class="section-name-caption">Portfolio</span>
-                      <i class="ph ph-arrow-down-right"></i>
+                      <span class="section-name-caption">Portafolio</span>
+                      <i class="ph ph-arrow-down-right">&nbsp;</i>
                     </span>
                   </div>
                   <!-- Content Block - Section Name Start -->
@@ -472,7 +489,7 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
                       <!-- External Portfolio Link Start -->
                       <div class="gallery__btn animate-in-up">
                         <a href="https://www.instagram.com/urceustincta" class="btn btn-line-circle-icon" target="_blank">
-                          <span class="btn-caption">Ver más en Instagram</span>
+                          <span class="btn-caption">Mira mi portfolio</span>
                           <span class="circle hover-circle">
                             <em></em>
                             <i class="ph ph-arrow-right"></i>
@@ -557,8 +574,8 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
                             <a class="btn btn-default hover-default"  target="_blank" href="https://wa.me/message/Q4UMKG36FNGWH1">
                               <em></em>
                               <span class="btn-caption">
-                                Agenda una consulta
-                              </span>
+                              Cotiza tu Tatuaje
+                            </span>
                             </a>
                           </div>
                         </div>
@@ -952,10 +969,7 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
 </p>
                                     </div>
                                     <div class="testimonials-card__btnholder animate-in-up">
-                                      <a class="btn btn-line icon-right slide-right" href="#0">
-                                        
-                                        <i class="ph ph-arrow-right"></i>
-                                      </a>
+                                     
                                     </div>
                                   </div>
                                   <div class="col-12 col-lg-6 testimonials-card__timage fullheight-l">
@@ -996,9 +1010,8 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
                                       <p class="type-basic-160lh">Muy profesional y dedicado a su trabajo. El lugar es limpio, organizado y transmite confianza, además utiliza materiales de calidad y todas las medidas de higiene necesarias. Su mano es precisa, con buen trazo, sombreados perfectos y mucho detalle en cada línea. Se nota la pasión y el talento en lo que hace. Sin duda volvería a tatuarme con él y lo recomiendo al 100%.</p>
                                     </div>
                                     <div class="testimonials-card__btnholder animate-in-up">
-                                      <a class="btn btn-line icon-right slide-right" href="#0">
-                                        <span class="btn-caption">Project page</span>
-                                        <i class="ph ph-arrow-right"></i>
+                                        
+                                        
                                       </a>
                                     </div>
                                   </div>
@@ -1023,7 +1036,6 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
                                       <div class="tauthor__info d-flex flex-column justify-content-center">
                                         <h4 class="tauthor__name animate-in-up">Ahizan Forero</h4>
                                         <p class="tauthor__position small animate-in-up">Hace un año
-                                          <a class="link-small-underline" href="#"></a>
                                         </p>
                                         <div class="tauthor__rating d-flex animate-in-up">
                                           <i class="ph-fill ph-star"></i>
@@ -1038,10 +1050,8 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
                                       <p class="type-basic-160lh">Trabaja super bien👍👍👍👍👍</p>
                                     </div>
                                     <div class="testimonials-card__btnholder animate-in-up">
-                                      <a class="btn btn-line icon-right slide-right" href="#0">
-                                        
-                                        <i class="ph ph-arrow-right"></i>
-                                      </a>
+                                      
+                                    
                                     </div>
                                   </div>
                                   <div class="col-12 col-lg-6 testimonials-card__timage fullheight-l">
@@ -1065,7 +1075,7 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
                                       <div class="tauthor__info d-flex flex-column justify-content-center">
                                         <h4 class="tauthor__name animate-in-up">Gio Vergel</h4>
                                         <p class="tauthor__position small animate-in-up">Hace 3 meses 
-                                          <a class="link-small-underline" href="#"></a>
+                                         
                                         </p>
                                         <div class="tauthor__rating d-flex animate-in-up">
                                           <i class="ph-fill ph-star"></i>
@@ -1082,7 +1092,6 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
                                     <div class="testimonials-card__btnholder animate-in-up">
                                       <a class="btn btn-line icon-right slide-right" href="#0">
                                         
-                                        <i class="ph ph-arrow-right"></i>
                                       </a>
                                     </div>
                                   </div>
@@ -1109,7 +1118,7 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
                                         <h4 class="tauthor__name animate-in-up">Stefania Pelaez</h4>
 
                                         <p class="tauthor__position small animate-in-up">Hace 7 años 
-                                          <a class="link-small-underline" href="#"></a>
+                                          
                                         </p>
                                         <div class="tauthor__rating d-flex animate-in-up">
                                           <i class="ph-fill ph-star"></i>
@@ -1125,8 +1134,7 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
                                     </div>
                                     <div class="testimonials-card__btnholder animate-in-up">
                                       <a class="btn btn-line icon-right slide-right" href="#0">
-                                       
-                                        <i class="ph ph-arrow-right"></i>
+                                        
                                       </a>
                                     </div>
                                   </div>
@@ -1144,12 +1152,12 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
                         <div class="swiper-button-prev mxd-slider-btn mxd-slider-btn-square-prev animate-in-up">
                           <a class="btn btn-line icon-left slide-left" href="#0">
                             <i class="ph ph-arrow-left"></i>
-                            <span class="btn-caption">Prev</span>
+                            <span class="btn-caption"></span>
                           </a> 
                         </div>
                         <div class="swiper-button-next mxd-slider-btn mxd-slider-btn-square-next animate-in-up">
                           <a class="btn btn-line icon-right slide-right" href="#0">
-                            <span class="btn-caption">Next</span>
+                            <span class="btn-caption"></span>
                             <i class="ph ph-arrow-right"></i>
 
 
@@ -1200,15 +1208,14 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
         <div class="inner__wrapper">
           <div class="container-fluid p-0">
             <div class="row g-0">
-
-              <!-- Inner Section Name Start -->
+				<!-- Inner Section Name Start -->
               <div class="col-12 col-xl-2">
                 <div class="inner__name">
 
                   <!-- Content Block - Section Name Start -->
                   <div class="content__block name-block">
                     <span class="section-name icon-right animate-in-up">
-                      <span class="section-name-caption">Contacto</span>
+                      <span class="section-name-caption">Agenda</span>
                       <i class="ph ph-arrow-down-right"></i>
                     </span>
                   </div>
@@ -1221,13 +1228,70 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
               <!-- Inner Section Content Start -->
               <div class="col-12 col-xl-8">
                 <div class="inner__content">
-
+					</section>
                   <!-- Content Block - H2 Section Title Start -->
                   <div class="content__block section-form-title">
                     <div class="block__descr">
                       <h2 class="reveal-type animate-in-up">¡Agenda tu cita!</h2>
-                      <p class="h2__text text-twothirds type-basic-160lh animate-in-up">¿Tienes una idea para un tatuaje o quieres consultar sobre un diseño? Envíame un mensaje y te responderé lo antes posible.</p>
+                      <p class="h2__text type-basic-160lh animate-in-up">¿Tienes una idea para un tatuaje o quieres consultar sobre un diseño? Envíame un mensaje y te responderé lo antes posible.</p>
+                      <p class="h2__text type-basic-160lh animate-in-up">&nbsp;</p>
                     </div>
+					   
+					  <div class="container-fluid p-0 resume-lines">
+                     
+                      <!-- resume single item -->
+						                       
+<div class="proceso-tattoo-container">
+    
+        
+        <div class="proceso-pasos-grid">
+            <div class="proceso-paso-card">
+                <div class="proceso-numero"><i class="ph ph-ruler"></i></div>
+                <div class="proceso-paso-titulo">Consulta y Idea</div>
+                <div class="proceso-paso-descripcion">
+                    <p>Comparte tu idea con nosotros: diseño, tamaño, ubicación y estilo. Juntos refinaremos el concepto para crear el tatuaje perfecto para ti.</p>
+                </div>
+            </div>
+            
+            <div class="proceso-paso-card">
+                <div class="proceso-numero"><i class="ph ph-calendar-check"></i></div>
+                <div class="proceso-paso-titulo">Cotización y Planificación</div>
+                <div class="proceso-paso-descripcion">
+                    <p>Recibirás una cotización transparente y seleccionaremos la fecha ideal para tu sesión, considerando el tiempo necesario para tu diseño.</p>
+                </div>
+            </div>
+            
+            <div class="proceso-paso-card">
+                <div class="proceso-numero"><i class="ph ph-receipt"></i></div>
+                <div class="proceso-paso-titulo">Confirmación con Abono</div>
+                <div class="proceso-paso-descripcion">
+                    <p>Reserva tu cita con un abono que garantiza tu lugar en nuestra agenda y nos permite comenzar con el diseño personalizado de tu tatuaje.</p>
+                </div>
+            </div>
+            
+            <div class="proceso-paso-card">
+                <div class="proceso-numero"><i class="ph ph-pencil-line"></i></div>
+                <div class="proceso-paso-titulo">Diseño Personalizado</div>
+                <div class="proceso-paso-descripcion">
+                    <p>Creamos tu diseño único basado en tu idea. Lo verás y ajustaremos juntos el día de tu cita para asegurar que ames cada detalle.</p>
+                </div>
+            </div>
+            
+            <div class="proceso-paso-card">
+                <div class="proceso-numero"><i class="ph ph-seal-check"></i></div>
+                <div class="proceso-paso-titulo">Sesión y Cuidados</div>
+                <div class="proceso-paso-descripcion">
+                    <p>Disfruta de tu sesión de tatuaje y recibe instrucciones detalladas para el cuidado posterior que garantizará una perfecta cicatrización.</p>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+              
+ 
+                      
+
                   </div>
                   <!-- Content Block - H2 Section Title End -->
 
@@ -1237,17 +1301,140 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
       <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16">
         <path fill="currentColor" d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 0 3.628 0 7.992c0 1.399.296 2.707.831 3.918L0 16l4.204-1.102a7.927 7.927 0 0 0 3.79.992h.004c4.368 0 7.998-3.628 7.998-7.992a7.922 7.922 0 0 0-1.395-4.582zM7.994 14.773a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
       </svg>
-      <span class="btn-caption">Enviar mensaje</span>
+      <span class="btn-caption">Agenda Tu Cita</span>
     </span>
   </a>
 </div>
-                      <!-- Contact Form End -->
-
-                    </div>
+            <div class="block__subtitle">
+                      <p class="tagline-chapter animate-in-up">Preguntas</p>
+                    </div>          <!-- Contact Form End -->
+<div class="acordeon">
+        <div class="pregunta">
+            <h5 class="pregunta-titulo">¿Cómo puedo agendar mi cita?<span class="flecha"></span></h5>
+            <div class="respuesta">
+                <p>Puedes agendar tu cita contactándonos directamente a través de nuestro WhatsApp o por mensaje directo en Instagram. Por ahí coordinamos tu idea, la cotización y la fecha disponible.</p>
+            </div>
+        </div>
+        
+        <div class="pregunta">
+            <h5 class="pregunta-titulo">¿Por qué debo pagar un abono? ¿Es reembolsable?<span class="flecha"></span></h5>
+            <div class="respuesta">
+                <p><strong>Razón:</strong> El abono (o señal) es necesario para bloquear el tiempo en nuestra agenda y como compromiso de ambas partes para que empecemos a trabajar en el diseño personalizado de tu tatuaje. Sin el abono, no podemos reservar la cita.</p>
+                <p><strong>Reembolso:</strong> El abono NO es reembolsable, ya que cubre el tiempo de diseño y la reserva de la agenda que le quitamos a otros posibles clientes. Sin embargo, sí es transferible si necesitas reprogramar tu cita con al menos 48-72 horas de anticipación.</p>
+            </div>
+        </div>
+        
+        <div class="pregunta">
+            <h5 class="pregunta-titulo">¿Qué pasa si necesito cancelar o reprogramar mi cita?<span class="flecha"></span></h5>
+            <div class="respuesta">
+                <p>Entendemos que pueden surgir imprevistos. Si necesitas cambiar la fecha, avísanos con al menos 48-72 horas de antelación y tu abono se trasladará a la nueva fecha acordada. Las cancelaciones de último momento o la inasistencia sin aviso previo resultan en la pérdida del abono.</p>
+            </div>
+        </div>
+        
+        <div class="pregunta">
+            <h5 class="pregunta-titulo">¿Cuándo veo el diseño de mi tatuaje?<span class="flecha"></span></h5>
+            <div class="respuesta">
+                <p>El diseño final se revela el día de la cita. Esto nos permite dedicar el tiempo necesario para crear un arte único y personalizado para ti. En la cita, revisamos cada detalle contigo y hacemos ajustes menores si son necesarios. No enviamos diseños finales antes para proteger nuestro trabajo artístico de copias.</p>
+            </div>
+        </div>
+        
+        <div class="pregunta">
+            <h5 class="pregunta-titulo">¿El abono se descuenta del precio total?<span class="flecha"></span></h5>
+            <div class="respuesta">
+                <p>¡Sí! El abono que pagas para agendar NO es un cargo adicional. Es un adelanto que se descuenta directamente del precio final del tatuaje. El día de tu cita, solo pagarás el saldo restante (Precio total - Abono).</p>
+            </div>
+        </div>
+        
+        <div class="pregunta">
+            <h5 class="pregunta-titulo">¿Qué métodos de pago aceptan?<span class="flecha"></span></h5>
+            <div class="respuesta">
+                <p>Aceptamos pagos en efectivo, transferencia bancaria y tarjetas de débito/crédito (puede aplicar un pequeño recargo por comisión con tarjeta). El abono generalmente se realiza por transferencia.</p>
+            </div>
+        </div>
+        
+        <div class="pregunta">
+            <h5 class="pregunta-titulo">¿Qué incluye el precio cotizado?<span class="flecha"></span></h5>
+            <div class="respuesta">
+                <p>El precio que te cotizamos incluye la sesión de tatuaje, la creación del diseño personalizado, la tinta, los supplies estériles y las curas básicas para el aftercare. Es un precio todo incluido por el servicio.</p>
+            </div>
+        </div>
+        
+        <div class="pregunta">
+            <h5 class="pregunta-titulo">¿Puedo llevar mi propio diseño?<span class="flecha"></span></h5>
+            <div class="respuesta">
+                <p>¡Claro! Puedes traer tus referencias, ideas o diseños que te gusten. Nosotros los usaremos como guía para crear una pieza adaptada a tu cuerpo y estilo, o podemos tatuar tu diseño tal cual lo traes.</p>
+            </div>
+        </div>
+        
+        <div class="pregunta">
+            <h5 class="pregunta-titulo">¿Cuánto tiempo antes debo agendar?<span class="flecha"></span></h5>
+            <div class="respuesta">
+                <p>Recomendamos agendar con al menos 2-3 semanas de anticipación, ya que nuestra agenda se llena rápidamente. Para diseños grandes o proyectos complejos, es mejor contactarnos con más tiempo.</p>
+            </div>
+        </div>
+        
+        <div class="pregunta">
+            <h5 class="pregunta-titulo">¿Qué debo hacer el día de la cita?<span class="flecha"></span></h5> 
+            <div class="respuesta">
+                <p>Llega bien descansado y habiendo comido.
+                    Evita consumir alcohol o anticoagulantes 24 horas antes.
+                    Ve con la ropa adecuada que permita acceso fácil a la zona a tatuar.
+                    ¡Y trae muchas ganas!</p>
+                
+            </div>
+        </div>
+    </div>
+                      <p class="h2__text type-basic-160lh animate-in-up">¿Tienes una idea para un tatuaje o quieres consultar sobre un diseño? Envíame un mensaje y te responderé lo antes posible.</p>
+                      <p class="h2__text type-basic-160lh animate-in-up">&nbsp;</p>
+                </div>
                   </div>
                   <!-- Content Block - Contact Form End -->
 
                   <!-- Content Block - Contact Data Start -->
+				<div class="col-12 col-xl-8">
+                
+					  </div>
+                  </div>
+                  <!-- Content Block - Contact Data End -->
+                  
+                </div>
+              </div>
+              <!-- Inner Section Content End -->
+
+              <!-- Inner Section Aside Start -->
+              <div class="col-12 col-xl-2"></div>
+              <!-- Inner Section Aside End -->
+
+            </div>
+          </div>
+ <!-- Inner Section - Contact - Start -->
+      <section id="contact" class="inner contact inner-grid-bottom no-padding-bottom">
+        <div class="inner__wrapper">
+          <div class="container-fluid p-0">
+            <div class="row g-0">
+
+              <!-- Inner Section Name Start -->
+              <div class="col-12 col-xl-2">
+                <div class="inner__name">
+
+                  
+
+                </div>
+              </div>
+              <!-- Inner Section Name End -->
+
+              <!-- Inner Section Content Start -->
+              <div class="col-12 col-xl-8">
+                <div class="inner__content">
+
+                 
+
+                  
+
+                  <!-- Content Block - Contact Data Start -->
+                  <div class="content__block grid-block">
+                    <div class="container-fluid p-0 contact-data">
+                      <div class="inner__content">
                   <div class="content__block grid-block">
                     <div class="container-fluid p-0 contact-data">
                       <div class="row g-0">
@@ -1278,6 +1465,8 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
                       </div>
                     </div>
                   </div>
+                    </div>
+                  </div>
                   <!-- Content Block - Contact Data End -->
                   
                 </div>
@@ -1290,7 +1479,6 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
 
             </div>
           </div>
-
           <!-- Inner Section Off-canvas Content (Footer Marquee Block) Start -->
           <div class="footer footer-marquee">
             <div class="container-fluid p-0">
@@ -1454,10 +1642,6 @@ src="https://www.facebook.com/tr?id=338835177721285&ev=PageView&noscript=1"
 
 
 </html>
-
-
-
-
 
 
 
