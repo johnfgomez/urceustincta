@@ -480,9 +480,9 @@
 @media (max-width: 576px) {
   .profile-bg-container {
       position: relative;
-      top: -150px;
-    left: -90px;
-    width: 700px;
+      top: -120px;
+    left: -130px;
+    width: 690px;
     max-width: none;
   }
   
@@ -73178,5 +73178,6 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* Features Contact Data End */
 /* ------------------------------------------------*/
+
 
 
